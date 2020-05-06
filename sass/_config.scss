@@ -1,16 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 // PRIMARY
 $LimeGreen: hsl(163, 72%, 41%);
 $BrightRed: hsl(356, 69%, 56%);
 $Facebook: hsl(195, 100%, 50%);
 $Twitter: hsl(203, 89%, 53%);
 $Instagram: hsl(329, 70%, 58%);
-// linear gradient hsl(37, 97%, 70%) to 
+// linear gradient hsl(37, 97%, 70%) to
 $YouTube: hsl(348, 97%, 39%);
 
 // Dark Theme
 
-$Toggle: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
+$Toggleg: hsl(210, 78%, 56%); 
+$Toggleh: hsl(146, 68%, 55%);
 
 // Light Theme
 
@@ -32,12 +33,12 @@ $LightGrayishBlue: hsl(227, 47%, 96%);
 $DarkGrayishBlue: hsl(228, 12%, 44%);
 $VeryDarkBlue: hsl(230, 17%, 14%);
 
-@mixin transition{
-    transition: all 0.3s ease-in-out;
+@mixin transition {
+  transition: all 0.3s ease-in-out;
 }
 
-*{
-    padding: 0;
-    font-family: 'Inter', sans-serif;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
 }

@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 * {
   padding: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -55,7 +55,54 @@ body {
 }
 
 .header__tail p {
-  font-size: 1.2rem;
+  font-size: 1rem;
+  color: #63687e;
+  font-weight: 600;
+  margin: 15px 5px 0 5px;
+}
+
+.header__tail .toggle input[type='checkbox'] {
+  display: none;
+}
+
+.header__tail .toggle input[type='checkbox']:checked ~ label {
+  background: -webkit-gradient(linear, left top, right top, from(#378fe6), to(#3eda82));
+  background: linear-gradient(to right, #378fe6, #3eda82);
+  border-color: #1db489;
+}
+
+.header__tail .toggle input[type='checkbox']:checked ~ label::after {
+  background-color: #fff;
+  -webkit-transform: translateX(35px);
+          transform: translateX(35px);
+}
+
+.header__tail .toggle label {
+  background-color: #aeb3cb;
+  border: 2px solid #aeb3cb;
+  border-radius: 50px;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  width: 75px;
+  height: 40px;
+}
+
+.header__tail .toggle label::after {
+  background-color: white;
+  border-radius: 50%;
+  content: "";
+  cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  width: 32px;
+  height: 32px;
 }
 
 .articles {
@@ -83,8 +130,15 @@ body {
   margin: 0 2rem 0 2rem;
   border-radius: 5px;
   border-top: 5px solid deepskyblue;
+  cursor: pointer;
   -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
           box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.articles__listone:hover {
+  background: #aeb3cb;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .articles__listone .first {
@@ -140,16 +194,9 @@ body {
 }
 
 .articles__listone .last p {
-  color: #63687e;
   font-weight: bold;
   padding: 5px;
   cursor: pointer;
-}
-
-.articles__listone .last p:hover {
-  color: #1db489;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
 
 .articles__listtwo {
@@ -160,6 +207,13 @@ body {
   border-top: 5px solid #1ca0f2;
   -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
           box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.articles__listtwo:hover {
+  background: #aeb3cb;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .articles__listtwo .first {
@@ -215,16 +269,9 @@ body {
 }
 
 .articles__listtwo .last p {
-  color: #63687e;
   font-weight: bold;
   padding: 5px;
   cursor: pointer;
-}
-
-.articles__listtwo .last p:hover {
-  color: #1db489;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
 
 .articles__listthree {
@@ -235,6 +282,13 @@ body {
   -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
           box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
   border-top: 5px solid #df4996;
+  cursor: pointer;
+}
+
+.articles__listthree:hover {
+  background: #aeb3cb;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .articles__listthree .first {
@@ -290,16 +344,9 @@ body {
 }
 
 .articles__listthree .last p {
-  color: #63687e;
   font-weight: bold;
   padding: 5px;
   cursor: pointer;
-}
-
-.articles__listthree .last p:hover {
-  color: #1db489;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
 
 .articles__listfour {
@@ -310,6 +357,13 @@ body {
   border-top: 5px solid #c4032a;
   -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
           box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.articles__listfour:hover {
+  background: #aeb3cb;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .articles__listfour .first {
@@ -365,16 +419,9 @@ body {
 }
 
 .articles__listfour .last p {
-  color: #63687e;
   font-weight: bold;
   padding: 5px;
   cursor: pointer;
-}
-
-.articles__listfour .last p:hover {
-  color: #1db489;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
 
 .section {
@@ -411,6 +458,13 @@ body {
   border-radius: 5px;
   margin: 2px;
   height: 130px;
+  cursor: pointer;
+}
+
+.section .overview__list:hover {
+  background: #aeb3cb;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .section .overview__list .first {

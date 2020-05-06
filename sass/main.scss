@@ -1,342 +1,398 @@
-@import './config';
-body{
-    margin: 0;
-    padding: 0;
+@import "./config";
+body {
+  margin: 0;
+  padding: 0;
+
 }
-.header{
-   display: flex;
-   flex-direction: row;
-   height: 30vh;
-   justify-content: space-between;
-   align-items: center;
-   padding: 1rem 7rem 2rem 7rem;
-   overflow: hidden;
-   background: $LightGrayishBlue;
+.header {
+  display: flex;
+  flex-direction: row;
+  height: 30vh;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 7rem 2rem 7rem;
+  overflow: hidden;
+  background: $LightGrayishBlue;
 
-   &__head{
-       h2{
-           font-size: 2.5rem;
-           letter-spacing: 0.5px;
-           overflow: hidden;
-           color: $DarkGrayishBlue;
-       }
-       p{
-           overflow: hidden;
-           font-size: 1rem;
-           color: $DarkGrayishBlue;
-       }
-   }
+  &__head {
+    h2 {
+      font-size: 2.5rem;
+      letter-spacing: 0.5px;
+      overflow: hidden;
+      color: $DarkGrayishBlue;
+    }
+    p {
+      overflow: hidden;
+      font-size: 1rem;
+      color: $DarkGrayishBlue;
+    }
+  }
 
-   &__tail{
+  &__tail {
     display: flex;
     flex-direction: row;
 
-    p{
-        font-size: 1.2rem;
+    p {
+      font-size: 1rem;
+      color: $DarkGrayishBlue;
+      font-weight: 600;
+      margin: 15px 5px 0 5px;
     }
-   }
+     .toggle{
+         input[type='checkbox']{
+             display: none;
+
+             &:checked ~ label{
+                 background: linear-gradient(to right, $Toggleg , $Toggleh);
+                 border-color: $LimeGreen;
+
+                 &::after{
+                     background-color: #fff;
+                     transform: translateX(35px);
+                 }
+             }
+         }
+
+         label{
+             background-color: $Toggle2;
+             border: 2px solid $Toggle2;
+             border-radius: 50px;
+             cursor: pointer;
+             display: inline-block;
+             position: relative;
+             @include transition;
+             width: 75px;
+             height: 40px;
+
+             &::after{
+                 background-color: $White;
+                 border-radius: 50%;
+                 content: "";
+                 cursor: pointer;
+                 display: inline-block;
+                 position: absolute;
+                 left: 2px;
+                 top: 2px;
+                 @include transition;
+                 width: 32px;
+                 height: 32px;
+             }
+         }
+     }
+  }
 }
 
-.articles{
+.articles {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-between;
+  grid-gap: 5px;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
+  top: 11rem;
+  left: 5rem;
+  right: 5rem;
+
+  &__listone {
+    background: $LightGrayishBlue;
+    padding: 1rem 3rem 0 3rem;
+    margin: 0 2rem 0 2rem;
+    border-radius: 5px;
+    border-top: 5px solid $Facebook;
+    cursor: pointer;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+
+    &:hover{
+        background: $Toggle2;
+        @include transition;
+    }
+
+    .first {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      p {
+        color: $DarkGrayishBlue;
+        font-weight: bold;
+        margin: 10px;
+      }
+    }
+
+    .texts {
+      h1 {
+        font-size: 1.9rem;
+        font-weight: 800;
+        text-align: center;
+      }
+      .big {
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        text-align: center;
+        overflow: hidden;
+        color: $DarkGrayishBlue;
+      }
+    }
+    .last {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      p {
+        font-weight: bold;
+        padding: 5px;
+        cursor: pointer;
+      }
+    }
+  }
+  &__listtwo {
+    background: $LightGrayishBlue;
+    padding: 1rem 3rem 0 3rem;
+    margin: 0 2rem 0 2rem;
+    border-radius: 5px;
+    border-top: 5px solid $Twitter;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+
+    
+    &:hover{
+        background: $Toggle2;
+        @include transition;
+    }
+
+    .first {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      p {
+        color: $DarkGrayishBlue;
+        font-weight: bold;
+        margin: 10px;
+      }
+    }
+
+    .texts {
+      h1 {
+        font-size: 1.9rem;
+        font-weight: 800;
+        text-align: center;
+      }
+      .big {
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        text-align: center;
+        overflow: hidden;
+        color: $DarkGrayishBlue;
+      }
+    }
+    .last {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      p {
+        font-weight: bold;
+        padding: 5px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__listthree {
+    background: $LightGrayishBlue;
+    padding: 1rem 3rem 0 3rem;
+    margin: 0 2rem 0 2rem;
+    border-radius: 5px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid $Instagram;
+    cursor: pointer;
+
+    
+    &:hover{
+        background: $Toggle2;
+        @include transition;
+    }
+
+    .first {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      p {
+        color: $DarkGrayishBlue;
+        font-weight: bold;
+        margin: 10px;
+      }
+    }
+
+    .texts {
+      h1 {
+        font-size: 1.9rem;
+        font-weight: 800;
+        text-align: center;
+      }
+      .big {
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        text-align: center;
+        overflow: hidden;
+        color: $DarkGrayishBlue;
+      }
+    }
+    .last {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      p {
+        font-weight: bold;
+        padding: 5px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__listfour {
+    background: $LightGrayishBlue;
+    padding: 1rem 3rem 0 3rem;
+    margin: 0 2rem 0 2rem;
+    border-radius: 5px;
+    border-top: 5px solid $YouTube;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+
+    
+    &:hover{
+        background: $Toggle2;
+        @include transition;
+    }
+
+    .first {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      p {
+        color: $DarkGrayishBlue;
+        font-weight: bold;
+        margin: 10px;
+      }
+    }
+
+    .texts {
+      h1 {
+        font-size: 2rem;
+        font-weight: 10rem;
+        text-align: center;
+      }
+      .big {
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        text-align: center;
+        overflow: hidden;
+        color: $DarkGrayishBlue;
+      }
+    }
+    .last {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      p {
+        font-weight: bold;
+        padding: 5px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.section {
+  position: absolute;
+  top: 50%;
+  left: 7rem;
+  right: 7rem;
+
+  &__text {
+    .text-primary {
+      color: $DarkGrayishBlue;
+      margin-top: 2rem;
+    }
+  }
+  .overview {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-content: space-between;
-    grid-gap: 5px;
+    grid-gap: 25px;
     align-items: center;
-    position: absolute;
     z-index: 2;
-    top: 11rem;
     left: 5rem;
     right: 5rem;
 
-    &__listone{
-        background: $LightGrayishBlue;
-        padding: 1rem 3rem 0 3rem;
-        margin: 0 2rem 0 2rem;
-        border-radius: 5px;
-        border-top: 5px solid $Facebook;
-        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    &__list {
+      background: $LightGrayishBlue;
+      border-radius: 5px;
+      margin: 2px;
+      height: 130px;
+      cursor: pointer;
 
-        .first{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-
-            p{
-                color: $DarkGrayishBlue;
-                font-weight: bold;
-                margin: 10px;
-            }
-        }
-
-        .texts{
-            h1{
-                font-size: 1.9rem;
-                font-weight: 800;
-                text-align: center;
-            }
-            .big{
-                text-transform: uppercase;
-                letter-spacing: 5px;
-                text-align: center;
-                overflow: hidden;
-                color: $DarkGrayishBlue;
-            }
-        }
-        .last{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-
-            p{
-                color: $DarkGrayishBlue;
-                font-weight: bold;
-                padding: 5px;
-                cursor: pointer;
-
-                &:hover{
-                    color: $LimeGreen;
-                    @include transition;
-                }
-            }
-        }
-    }
-    &__listtwo{
-        background: $LightGrayishBlue;
-        padding: 1rem 3rem 0 3rem;
-        margin: 0 2rem 0 2rem;
-        border-radius: 5px;
-        border-top: 5px solid $Twitter;
-        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-
-        
-        .first{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-
-            p{
-                color: $DarkGrayishBlue;
-                font-weight: bold;
-                margin: 10px;
-            }
-        }
-
-        .texts{
-            h1{
-                font-size: 1.9rem;
-                font-weight: 800;
-                text-align: center;
-            }
-            .big{
-                text-transform: uppercase;
-                letter-spacing: 5px;
-                text-align: center;
-                overflow: hidden;
-                color: $DarkGrayishBlue;
-            }
-        }
-        .last{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-
-            p{
-                color: $DarkGrayishBlue;
-                font-weight: bold;
-                padding: 5px;
-                cursor: pointer;
-
-                &:hover{
-                    color: $LimeGreen;
-                    @include transition;
-                }
-            }
-        }
-    }
-    
-    &__listthree{
-        background: $LightGrayishBlue;
-        padding: 1rem 3rem 0 3rem;
-        margin: 0 2rem 0 2rem;
-        border-radius: 5px;
-        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-        border-top: 5px solid $Instagram;
-        .first{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-
-            p{
-                color: $DarkGrayishBlue;
-                font-weight: bold;
-                margin: 10px;
-            }
-        }
-
-        .texts{
-            h1{
-                font-size: 1.9rem;
-                font-weight: 800;
-                text-align: center;
-            }
-            .big{
-                text-transform: uppercase;
-                letter-spacing: 5px;
-                text-align: center;
-                overflow: hidden;
-                color: $DarkGrayishBlue;
-            }
-        }
-        .last{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-
-            p{
-                color: $DarkGrayishBlue;
-                font-weight: bold;
-                padding: 5px;
-                cursor: pointer;
-
-                &:hover{
-                    color: $LimeGreen;
-                    @include transition;
-                }
-            }
-        }
+      &:hover{
+        background: $Toggle2;
+        @include transition;
     }
 
-    &__listfour{
-        background: $LightGrayishBlue;
-        padding: 1rem 3rem 0 3rem;
-        margin: 0 2rem 0 2rem;
-        border-radius: 5px;
-        border-top: 5px solid $YouTube;
-        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-
-        .first{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-
-            p{
-                color: $DarkGrayishBlue;
-                font-weight: bold;
-                margin: 10px;
-            }
-        }
-
-        .texts{
-            h1{
-                font-size: 2rem;
-                font-weight: 10rem;
-                text-align: center;
-            }
-            .big{
-                text-transform: uppercase;
-                letter-spacing: 5px;
-                text-align: center;
-                overflow: hidden;
-                color: $DarkGrayishBlue;
-            }
-        }
-        .last{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-
-            p{
-                color: $DarkGrayishBlue;
-                font-weight: bold;
-                padding: 5px;
-                cursor: pointer;
-
-                &:hover{
-                    color: $LimeGreen;
-                    @include transition;
-                }
-            }
-        }
-    }
-    
-}
-
-.section{
-    position: absolute;
-    top: 50%;
-    left: 7rem;
-    right: 7rem;
-
-    &__text{
-        .text-primary{
-            color: $DarkGrayishBlue;
-            margin-top: 2rem;
-        }
-    }
-    .overview{
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        justify-content: space-between;
-        grid-gap: 25px;
+      .first {
+        display: flex;
+        flex-direction: row;
         align-items: center;
-        z-index: 2;
-        left: 5rem;
-        right: 5rem;
+        justify-content: space-between;
+        padding: 10px 30px 0 30px;
 
-        &__list{
-            background: $LightGrayishBlue;
-            border-radius: 5px;
-            margin: 2px;
-            height: 130px;
-
-            .first{
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: space-between;
-                padding: 10px 30px 0 30px;
-
-                p{
-                    color: $DarkGrayishBlue;
-                    font-weight: 600;
-                    letter-spacing: 1px;
-                }
-            }
-            .last{
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: space-between;
-                padding: 0 14px 0px 0px;
-
-
-                .first{
-                    h2{
-                        font-weight: 750;
-                        margin-bottom: 30px;
-                     
-                    }
-                }
-            }
+        p {
+          color: $DarkGrayishBlue;
+          font-weight: 600;
+          letter-spacing: 1px;
         }
+      }
+      .last {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 14px 0px 0px;
+
+        .first {
+          h2 {
+            font-weight: 750;
+            margin-bottom: 30px;
+          }
+        }
+      }
     }
+  }
 }
 
-.green{
-    color: $LimeGreen;
+.green {
+  color: $LimeGreen;
 }
-.red{
-    color: $BrightRed;
+.red {
+  color: $BrightRed;
 }
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
