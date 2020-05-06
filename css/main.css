@@ -26,7 +26,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 3rem 7rem 2rem 7rem;
+  padding: 1rem 7rem 2rem 7rem;
   overflow: hidden;
   background: #f0f2fa;
 }
@@ -72,7 +72,7 @@ body {
           align-items: center;
   position: absolute;
   z-index: 2;
-  top: 12rem;
+  top: 11rem;
   left: 5rem;
   right: 5rem;
 }
@@ -110,8 +110,8 @@ body {
 }
 
 .articles__listone .texts h1 {
-  font-size: 2rem;
-  font-weight: 15rem;
+  font-size: 1.9rem;
+  font-weight: 800;
   text-align: center;
 }
 
@@ -185,8 +185,8 @@ body {
 }
 
 .articles__listtwo .texts h1 {
-  font-size: 2rem;
-  font-weight: 10rem;
+  font-size: 1.9rem;
+  font-weight: 800;
   text-align: center;
 }
 
@@ -260,8 +260,8 @@ body {
 }
 
 .articles__listthree .texts h1 {
-  font-size: 2rem;
-  font-weight: 10rem;
+  font-size: 1.9rem;
+  font-weight: 800;
   text-align: center;
 }
 
@@ -379,13 +379,14 @@ body {
 
 .section {
   position: absolute;
-  top: 55%;
+  top: 50%;
   left: 7rem;
   right: 7rem;
 }
 
 .section__text .text-primary {
   color: #63687e;
+  margin-top: 2rem;
 }
 
 .section .overview {
@@ -409,6 +410,60 @@ body {
   background: #f0f2fa;
   border-radius: 5px;
   margin: 2px;
+  height: 130px;
+}
+
+.section .overview__list .first {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 30px 0 30px;
+}
+
+.section .overview__list .first p {
+  color: #63687e;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.section .overview__list .last {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 14px 0px 0px;
+}
+
+.section .overview__list .last .first h2 {
+  font-weight: 750;
+  margin-bottom: 30px;
+}
+
+.green {
+  color: #1db489;
+}
+
+.red {
+  color: #dc414c;
 }
 
 .attribution {
