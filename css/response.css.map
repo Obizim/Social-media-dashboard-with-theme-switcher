@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../sass/response.scss"
+    ],
+    "names": [],
+    "file": "response.css"
+}

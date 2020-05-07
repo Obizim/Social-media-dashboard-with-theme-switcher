@@ -1,14 +1,17 @@
 @import "./config";
+
 body {
   margin: 0;
   padding: 0;
 
 }
 .header {
-  display: flex;
-  flex-direction: row;
-  height: 30vh;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  height: 35vh;
+  grid-gap: 20rem;
+  width: 100vw;
+  justify-content: center;
   align-items: center;
   padding: 1rem 7rem 2rem 7rem;
   overflow: hidden;
@@ -23,7 +26,7 @@ body {
     }
     p {
       overflow: hidden;
-      font-size: 1rem;
+      font-size: 0.8rem;
       color: $DarkGrayishBlue;
     }
   }
@@ -31,14 +34,17 @@ body {
   &__tail {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
 
     p {
       font-size: 1rem;
       color: $DarkGrayishBlue;
       font-weight: 600;
-      margin: 15px 5px 0 5px;
+      margin: 13px 5px 0 5px;
     }
      .toggle{
+        margin: 13px 5px 0 5px;
          input[type='checkbox']{
              display: none;
 
@@ -48,7 +54,7 @@ body {
 
                  &::after{
                      background-color: #fff;
-                     transform: translateX(35px);
+                     transform: translateX(34px);
                  }
              }
          }
@@ -61,8 +67,8 @@ body {
              display: inline-block;
              position: relative;
              @include transition;
-             width: 75px;
-             height: 40px;
+             width: 60px;
+             height: 25px;
 
              &::after{
                  background-color: $White;
@@ -71,279 +77,284 @@ body {
                  cursor: pointer;
                  display: inline-block;
                  position: absolute;
-                 left: 2px;
-                 top: 2px;
+                 left: 1px;
+                 top: 1px;
                  @include transition;
-                 width: 32px;
-                 height: 32px;
+                 width: 20px;
+                 height: 20px;
              }
          }
      }
   }
 }
 
+.articles-bg{
+    width: 100vw;
+    // ARTICLES
 .articles {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  justify-content: space-between;
-  grid-gap: 5px;
-  align-items: center;
-  position: absolute;
-  z-index: 2;
-  top: 11rem;
-  left: 5rem;
-  right: 5rem;
-
-  &__listone {
-    background: $LightGrayishBlue;
-    padding: 1rem 3rem 0 3rem;
-    margin: 0 2rem 0 2rem;
-    border-radius: 5px;
-    border-top: 5px solid $Facebook;
-    cursor: pointer;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-
-    &:hover{
-        background: $Toggle2;
-        @include transition;
-    }
-
-    .first {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-
-      p {
-        color: $DarkGrayishBlue;
-        font-weight: bold;
-        margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -3rem;
+    width: 100vw;
+  
+    &__listone {
+      background: $LightGrayishBlue;
+      padding: 1rem 3rem 0 3rem;
+      margin: 0 2rem 0 2rem;
+      border-radius: 5px;
+      border-top: 5px solid $Facebook;
+      cursor: pointer;
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  
+      &:hover{
+          background: $Toggle2;
+          @include transition;
+      }
+  
+      .first {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+  
+        p {
+          color: $DarkGrayishBlue;
+          font-weight: bold;
+          margin: 10px;
+        }
+      }
+  
+      .texts {
+        h1 {
+          font-size: 1.9rem;
+          font-weight: 800;
+          text-align: center;
+        }
+        .big {
+          text-transform: uppercase;
+          letter-spacing: 5px;
+          text-align: center;
+          overflow: hidden;
+          color: $DarkGrayishBlue;
+        }
+      }
+      .last {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+  
+        p {
+          font-weight: bold;
+          padding: 5px;
+          cursor: pointer;
+        }
       }
     }
-
-    .texts {
-      h1 {
-        font-size: 1.9rem;
-        font-weight: 800;
-        text-align: center;
+    &__listtwo {
+      background: $LightGrayishBlue;
+      padding: 1rem 3rem 0 3rem;
+      margin: 0 2rem 0 2rem;
+      border-radius: 5px;
+      border-top: 5px solid $Twitter;
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+  
+      
+      &:hover{
+          background: $Toggle2;
+          @include transition;
       }
-      .big {
-        text-transform: uppercase;
-        letter-spacing: 5px;
-        text-align: center;
-        overflow: hidden;
-        color: $DarkGrayishBlue;
+  
+      .first {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+  
+        p {
+          color: $DarkGrayishBlue;
+          font-weight: bold;
+          margin: 10px;
+        }
       }
-    }
-    .last {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-
-      p {
-        font-weight: bold;
-        padding: 5px;
-        cursor: pointer;
+  
+      .texts {
+        h1 {
+          font-size: 1.9rem;
+          font-weight: 800;
+          text-align: center;
+        }
+        .big {
+          text-transform: uppercase;
+          letter-spacing: 5px;
+          text-align: center;
+          overflow: hidden;
+          color: $DarkGrayishBlue;
+        }
       }
-    }
-  }
-  &__listtwo {
-    background: $LightGrayishBlue;
-    padding: 1rem 3rem 0 3rem;
-    margin: 0 2rem 0 2rem;
-    border-radius: 5px;
-    border-top: 5px solid $Twitter;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-
-    
-    &:hover{
-        background: $Toggle2;
-        @include transition;
-    }
-
-    .first {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-
-      p {
-        color: $DarkGrayishBlue;
-        font-weight: bold;
-        margin: 10px;
-      }
-    }
-
-    .texts {
-      h1 {
-        font-size: 1.9rem;
-        font-weight: 800;
-        text-align: center;
-      }
-      .big {
-        text-transform: uppercase;
-        letter-spacing: 5px;
-        text-align: center;
-        overflow: hidden;
-        color: $DarkGrayishBlue;
+      .last {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+  
+        p {
+          font-weight: bold;
+          padding: 5px;
+          cursor: pointer;
+        }
       }
     }
-    .last {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-
-      p {
-        font-weight: bold;
-        padding: 5px;
-        cursor: pointer;
+  
+    &__listthree {
+      background: $LightGrayishBlue;
+      padding: 1rem 3rem 0 3rem;
+      margin: 0 2rem 0 2rem;
+      border-radius: 5px;
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+      border-top: 5px solid $Instagram;
+      cursor: pointer;
+  
+      
+      &:hover{
+          background: $Toggle2;
+          @include transition;
+      }
+  
+      .first {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+  
+        p {
+          color: $DarkGrayishBlue;
+          font-weight: bold;
+          margin: 10px;
+        }
+      }
+  
+      .texts {
+        h1 {
+          font-size: 1.9rem;
+          font-weight: 800;
+          text-align: center;
+        }
+        .big {
+          text-transform: uppercase;
+          letter-spacing: 5px;
+          text-align: center;
+          overflow: hidden;
+          color: $DarkGrayishBlue;
+        }
+      }
+      .last {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+  
+        p {
+          font-weight: bold;
+          padding: 5px;
+          cursor: pointer;
+        }
       }
     }
-  }
-
-  &__listthree {
-    background: $LightGrayishBlue;
-    padding: 1rem 3rem 0 3rem;
-    margin: 0 2rem 0 2rem;
-    border-radius: 5px;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-    border-top: 5px solid $Instagram;
-    cursor: pointer;
-
-    
-    &:hover{
-        background: $Toggle2;
-        @include transition;
-    }
-
-    .first {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-
-      p {
-        color: $DarkGrayishBlue;
-        font-weight: bold;
-        margin: 10px;
+  
+    &__listfour {
+      background: $LightGrayishBlue;
+      padding: 1rem 3rem 0 3rem;
+      margin: 0 2rem 0 2rem;
+      border-radius: 5px;
+      border-top: 5px solid $YouTube;
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+  
+      
+      &:hover{
+          background: $Toggle2;
+          @include transition;
       }
-    }
-
-    .texts {
-      h1 {
-        font-size: 1.9rem;
-        font-weight: 800;
-        text-align: center;
+  
+      .first {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+  
+        p {
+          color: $DarkGrayishBlue;
+          font-weight: bold;
+          margin: 10px;
+        }
       }
-      .big {
-        text-transform: uppercase;
-        letter-spacing: 5px;
-        text-align: center;
-        overflow: hidden;
-        color: $DarkGrayishBlue;
+  
+      .texts {
+        h1 {
+          font-size: 2rem;
+          font-weight: 10rem;
+          text-align: center;
+        }
+        .big {
+          text-transform: uppercase;
+          letter-spacing: 3px;
+          text-align: center;
+          overflow: hidden;
+          color: $DarkGrayishBlue;
+        }
       }
-    }
-    .last {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-
-      p {
-        font-weight: bold;
-        padding: 5px;
-        cursor: pointer;
-      }
-    }
-  }
-
-  &__listfour {
-    background: $LightGrayishBlue;
-    padding: 1rem 3rem 0 3rem;
-    margin: 0 2rem 0 2rem;
-    border-radius: 5px;
-    border-top: 5px solid $YouTube;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-
-    
-    &:hover{
-        background: $Toggle2;
-        @include transition;
-    }
-
-    .first {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-
-      p {
-        color: $DarkGrayishBlue;
-        font-weight: bold;
-        margin: 10px;
-      }
-    }
-
-    .texts {
-      h1 {
-        font-size: 2rem;
-        font-weight: 10rem;
-        text-align: center;
-      }
-      .big {
-        text-transform: uppercase;
-        letter-spacing: 5px;
-        text-align: center;
-        overflow: hidden;
-        color: $DarkGrayishBlue;
-      }
-    }
-    .last {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-
-      p {
-        font-weight: bold;
-        padding: 5px;
-        cursor: pointer;
+      .last {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+  
+        p {
+          font-weight: bold;
+          padding: 5px;
+          cursor: pointer;
+        }
       }
     }
   }
 }
 
-.section {
-  position: absolute;
-  top: 50%;
-  left: 7rem;
-  right: 7rem;
 
-  &__text {
-    .text-primary {
-      color: $DarkGrayishBlue;
-      margin-top: 2rem;
-    }
-  }
+.text{
+    position: relative;
+    z-index: 1;
+    top: -2.5rem;
+    margin-left: 10rem;
+}
+
+.section {
+    align-items: center;  
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100vw;
+    position: relative;
+    top: -2rem;
+
   .overview {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    justify-content: space-between;
-    grid-gap: 25px;
+    justify-content: center;
+    grid-gap: 2.5rem;
     align-items: center;
-    z-index: 2;
-    left: 5rem;
-    right: 5rem;
+    padding: 0 40px 0 40px;
 
     &__list {
       background: $LightGrayishBlue;
       border-radius: 5px;
       margin: 2px;
-      height: 130px;
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+      width: 250px;
       cursor: pointer;
 
       &:hover{
@@ -389,10 +400,6 @@ body {
   color: $BrightRed;
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
-}
+@import './responsive';
+@import './response';
+
