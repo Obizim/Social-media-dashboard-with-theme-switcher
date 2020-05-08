@@ -11,6 +11,10 @@ body {
   padding: 0;
 }
 
+body.dark-theme {
+  background: #1e202a;
+}
+
 .header {
   display: -ms-grid;
   display: grid;
@@ -30,11 +34,16 @@ body {
   background: #f0f2fa;
 }
 
+.header.dark-theme {
+  background: #1e202a;
+}
+
 .header__head h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   letter-spacing: 0.5px;
   overflow: hidden;
   color: #63687e;
+  margin-left: 5rem;
 }
 
 .header__head p {
@@ -63,24 +72,24 @@ body {
   font-size: 1rem;
   color: #63687e;
   font-weight: 600;
-  margin: 13px 5px 0 5px;
+  margin: 13px 5px 0 6rem;
 }
 
 .header__tail .toggle {
   margin: 13px 5px 0 5px;
 }
 
-.header__tail .toggle input[type='checkbox'] {
+.header__tail .toggle input[type="checkbox"] {
   display: none;
 }
 
-.header__tail .toggle input[type='checkbox']:checked ~ label {
+.header__tail .toggle input[type="checkbox"]:checked ~ label {
   background: -webkit-gradient(linear, left top, right top, from(#378fe6), to(#3eda82));
   background: linear-gradient(to right, #378fe6, #3eda82);
   border-color: #1db489;
 }
 
-.header__tail .toggle input[type='checkbox']:checked ~ label::after {
+.header__tail .toggle input[type="checkbox"]:checked ~ label::after {
   background-color: #fff;
   -webkit-transform: translateX(34px);
           transform: translateX(34px);
@@ -146,6 +155,11 @@ body {
   cursor: pointer;
   -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
           box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.articles-bg .articles__listone.dark-theme {
+  background: #1e202a;
+  color: #fff;
 }
 
 .articles-bg .articles__listone:hover {
@@ -223,6 +237,11 @@ body {
   cursor: pointer;
 }
 
+.articles-bg .articles__listtwo.dark-theme {
+  background: #1e202a;
+  color: #fff;
+}
+
 .articles-bg .articles__listtwo:hover {
   background: #aeb3cb;
   -webkit-transition: all 0.3s ease-in-out;
@@ -296,6 +315,11 @@ body {
           box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
   border-top: 5px solid #df4996;
   cursor: pointer;
+}
+
+.articles-bg .articles__listthree.dark-theme {
+  background: #1e202a;
+  color: #fff;
 }
 
 .articles-bg .articles__listthree:hover {
@@ -373,6 +397,11 @@ body {
   cursor: pointer;
 }
 
+.articles-bg .articles__listfour.dark-theme {
+  background: #1e202a;
+  color: #fff;
+}
+
 .articles-bg .articles__listfour:hover {
   background: #aeb3cb;
   -webkit-transition: all 0.3s ease-in-out;
@@ -442,6 +471,7 @@ body {
   z-index: 1;
   top: -2.5rem;
   margin-left: 10rem;
+  color: #63687e;
 }
 
 .section {
@@ -486,6 +516,11 @@ body {
           box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
   width: 250px;
   cursor: pointer;
+}
+
+.section .overview__list.dark-theme {
+  background: #1e202a;
+  color: white;
 }
 
 .section .overview__list:hover {
@@ -539,6 +574,10 @@ body {
   margin-bottom: 30px;
 }
 
+hr {
+  display: none;
+}
+
 .green {
   color: #1db489;
 }
@@ -569,13 +608,22 @@ body {
     font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: 0;
+    margin-left: 3rem;
   }
   .header__head p {
     font-size: 0.6rem;
     font-weight: 650;
     letter-spacing: 0;
     padding-bottom: 20px;
-    border-bottom: 2px solid #63687e;
+  }
+  .header__head p::after {
+    position: absolute;
+    content: "";
+    top: 4.5rem;
+    left: 3rem;
+    height: 3px;
+    width: 60%;
+    background: #63687e;
   }
   .header__tail {
     -webkit-box-pack: justify;
@@ -589,6 +637,7 @@ body {
     font-weight: 600;
     position: absolute;
     left: 0;
+    margin-left: 4rem;
   }
   .header__tail .toggle {
     position: absolute;
@@ -606,11 +655,11 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
     grid-gap: 15px;
-    top: -4rem;
+    top: -2.5rem;
     width: 100vw;
   }
   .text {
-    top: -3.5rem;
+    top: -2.5rem;
     text-align: center;
     margin: 0;
   }
@@ -662,7 +711,15 @@ body {
     font-weight: 650;
     letter-spacing: 0;
     padding-bottom: 20px;
-    border-bottom: 2px solid #63687e;
+  }
+  .header__head p::after {
+    position: absolute;
+    content: "";
+    top: 4.5rem;
+    left: 5rem;
+    height: 3px;
+    width: 60%;
+    background: #63687e;
   }
   .header__tail {
     -webkit-box-pack: justify;

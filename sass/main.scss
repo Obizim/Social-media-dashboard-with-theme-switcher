@@ -4,10 +4,13 @@ body {
   margin: 0;
   padding: 0;
 
+  &.dark-theme{
+    background: $VeryDarkBlue;
+  }
 }
-.header {
+.header{
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
   height: 35vh;
   grid-gap: 20rem;
   width: 100vw;
@@ -17,12 +20,18 @@ body {
   overflow: hidden;
   background: $LightGrayishBlue;
 
+  &.dark-theme{
+    background: $VeryDarkBlue;
+    
+  }
+
   &__head {
     h2 {
-      font-size: 2.5rem;
+      font-size: 2rem;
       letter-spacing: 0.5px;
       overflow: hidden;
       color: $DarkGrayishBlue;
+      margin-left: 5rem
     }
     p {
       overflow: hidden;
@@ -41,57 +50,57 @@ body {
       font-size: 1rem;
       color: $DarkGrayishBlue;
       font-weight: 600;
-      margin: 13px 5px 0 5px;
+      margin: 13px 5px 0 6rem;
     }
-     .toggle{
-        margin: 13px 5px 0 5px;
-         input[type='checkbox']{
-             display: none;
+    .toggle {
+      margin: 13px 5px 0 5px;
+      input[type="checkbox"] {
+        display: none;
 
-             &:checked ~ label{
-                 background: linear-gradient(to right, $Toggleg , $Toggleh);
-                 border-color: $LimeGreen;
+        &:checked ~ label {
+          background: linear-gradient(to right, $Toggleg, $Toggleh);
+          border-color: $LimeGreen;
 
-                 &::after{
-                     background-color: #fff;
-                     transform: translateX(34px);
-                 }
-             }
-         }
+          &::after {
+            background-color: #fff;
+            transform: translateX(34px);
+          }
+        }
+      }
 
-         label{
-             background-color: $Toggle2;
-             border: 2px solid $Toggle2;
-             border-radius: 50px;
-             cursor: pointer;
-             display: inline-block;
-             position: relative;
-             @include transition;
-             width: 60px;
-             height: 25px;
+      label {
+        background-color: $Toggle2;
+        border: 2px solid $Toggle2;
+        border-radius: 50px;
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        @include transition;
+        width: 60px;
+        height: 25px;
 
-             &::after{
-                 background-color: $White;
-                 border-radius: 50%;
-                 content: "";
-                 cursor: pointer;
-                 display: inline-block;
-                 position: absolute;
-                 left: 1px;
-                 top: 1px;
-                 @include transition;
-                 width: 20px;
-                 height: 20px;
-             }
-         }
-     }
+        &::after {
+          background-color: $White;
+          border-radius: 50%;
+          content: "";
+          cursor: pointer;
+          display: inline-block;
+          position: absolute;
+          left: 1px;
+          top: 1px;
+          @include transition;
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
   }
 }
 
-.articles-bg{
-    width: 100vw;
-    // ARTICLES
-.articles {
+.articles-bg {
+  width: 100vw;
+  // ARTICLES
+  .articles {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -99,7 +108,7 @@ body {
     position: relative;
     top: -3rem;
     width: 100vw;
-  
+
     &__listone {
       background: $LightGrayishBlue;
       padding: 1rem 3rem 0 3rem;
@@ -108,25 +117,30 @@ body {
       border-top: 5px solid $Facebook;
       cursor: pointer;
       box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-  
-      &:hover{
-          background: $Toggle2;
-          @include transition;
+
+      &.dark-theme{
+        background: $VeryDarkBlue;
+        color: #fff;
       }
-  
+
+      &:hover {
+        background: $Toggle2;
+        @include transition;
+      }
+
       .first {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
-  
+
         p {
           color: $DarkGrayishBlue;
           font-weight: bold;
           margin: 10px;
         }
       }
-  
+
       .texts {
         h1 {
           font-size: 1.9rem;
@@ -146,7 +160,7 @@ body {
         flex-direction: row;
         align-items: center;
         justify-content: center;
-  
+
         p {
           font-weight: bold;
           padding: 5px;
@@ -162,26 +176,31 @@ body {
       border-top: 5px solid $Twitter;
       box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
       cursor: pointer;
-  
+
       
-      &:hover{
-          background: $Toggle2;
-          @include transition;
+      &.dark-theme{
+        background: $VeryDarkBlue;
+        color: #fff;
       }
-  
+
+      &:hover {
+        background: $Toggle2;
+        @include transition;
+      }
+
       .first {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
-  
+
         p {
           color: $DarkGrayishBlue;
           font-weight: bold;
           margin: 10px;
         }
       }
-  
+
       .texts {
         h1 {
           font-size: 1.9rem;
@@ -201,7 +220,7 @@ body {
         flex-direction: row;
         align-items: center;
         justify-content: center;
-  
+
         p {
           font-weight: bold;
           padding: 5px;
@@ -209,7 +228,7 @@ body {
         }
       }
     }
-  
+
     &__listthree {
       background: $LightGrayishBlue;
       padding: 1rem 3rem 0 3rem;
@@ -218,26 +237,31 @@ body {
       box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
       border-top: 5px solid $Instagram;
       cursor: pointer;
-  
+
       
-      &:hover{
-          background: $Toggle2;
-          @include transition;
+      &.dark-theme{
+        background: $VeryDarkBlue;
+        color: #fff;
       }
-  
+
+      &:hover {
+        background: $Toggle2;
+        @include transition;
+      }
+
       .first {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
-  
+
         p {
           color: $DarkGrayishBlue;
           font-weight: bold;
           margin: 10px;
         }
       }
-  
+
       .texts {
         h1 {
           font-size: 1.9rem;
@@ -257,7 +281,7 @@ body {
         flex-direction: row;
         align-items: center;
         justify-content: center;
-  
+
         p {
           font-weight: bold;
           padding: 5px;
@@ -265,7 +289,7 @@ body {
         }
       }
     }
-  
+
     &__listfour {
       background: $LightGrayishBlue;
       padding: 1rem 3rem 0 3rem;
@@ -274,26 +298,30 @@ body {
       border-top: 5px solid $YouTube;
       box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
       cursor: pointer;
-  
       
-      &:hover{
-          background: $Toggle2;
-          @include transition;
+      &.dark-theme{
+        background: $VeryDarkBlue;
+        color: #fff;
       }
-  
+
+      &:hover {
+        background: $Toggle2;
+        @include transition;
+      }
+
       .first {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
-  
+
         p {
           color: $DarkGrayishBlue;
           font-weight: bold;
           margin: 10px;
         }
       }
-  
+
       .texts {
         h1 {
           font-size: 2rem;
@@ -313,7 +341,7 @@ body {
         flex-direction: row;
         align-items: center;
         justify-content: center;
-  
+
         p {
           font-weight: bold;
           padding: 5px;
@@ -324,22 +352,22 @@ body {
   }
 }
 
-
-.text{
-    position: relative;
-    z-index: 1;
-    top: -2.5rem;
-    margin-left: 10rem;
+.text {
+  position: relative;
+  z-index: 1;
+  top: -2.5rem;
+  margin-left: 10rem;
+  color: $DarkGrayishBlue;
 }
 
 .section {
-    align-items: center;  
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100vw;
-    position: relative;
-    top: -2rem;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100vw;
+  position: relative;
+  top: -2rem;
 
   .overview {
     display: grid;
@@ -357,10 +385,15 @@ body {
       width: 250px;
       cursor: pointer;
 
-      &:hover{
+      &.dark-theme{
+        background: $VeryDarkBlue;
+        color: $White;
+      }
+
+      &:hover {
         background: $Toggle2;
         @include transition;
-    }
+      }
 
       .first {
         display: flex;
@@ -393,6 +426,9 @@ body {
   }
 }
 
+hr{
+  display: none;
+}
 .green {
   color: $LimeGreen;
 }
@@ -400,6 +436,5 @@ body {
   color: $BrightRed;
 }
 
-@import './responsive';
-@import './response';
-
+@import "./responsive";
+@import "./response";
