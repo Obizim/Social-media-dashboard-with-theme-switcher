@@ -6,6 +6,7 @@ body {
 
   &.dark-theme{
     background: $VeryDarkBlue;
+    color: #fff;
   }
 }
 .header{
@@ -22,7 +23,7 @@ body {
 
   &.dark-theme{
     background: $VeryDarkBlue;
-    
+    color: #fff;  
   }
 
   &__head {
@@ -425,9 +426,10 @@ body {
     }
   }
 }
-
-hr{
-  display: none;
+.white{
+  &.dark{
+    color: $White;
+  }
 }
 .green {
   color: $LimeGreen;

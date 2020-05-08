@@ -6,6 +6,7 @@ const three = document.getElementById('three');
 const four = document.getElementById('four');
 const overview = document.getElementsByClassName('overview__list');
 const body = document.body;
+const white = document.getElementsByClassName('white');
 
 toggle.addEventListener('input', e =>{
     const isChecked = e.target.checked;
@@ -20,6 +21,10 @@ toggle.addEventListener('input', e =>{
         for(var i =0; i < overview.length; i++){
             overview[i].classList.add('dark-theme');
         }
+
+        for(var i = 0; i < white.length; i++){
+            white[i].classList.add('dark');
+        }
     }else{
         body.classList.remove('dark-theme');
         header.classList.remove('dark-theme');
@@ -30,6 +35,10 @@ toggle.addEventListener('input', e =>{
 
         for(var i =0; i < overview.length; i++){
             overview[i].classList.remove('dark-theme');
+        }
+
+        for(var i = 0; i < white.length; i++){
+            white[i].classList.remove('dark');
         }
     }
 });

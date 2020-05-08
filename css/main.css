@@ -13,6 +13,7 @@ body {
 
 body.dark-theme {
   background: #1e202a;
+  color: #fff;
 }
 
 .header {
@@ -36,6 +37,7 @@ body.dark-theme {
 
 .header.dark-theme {
   background: #1e202a;
+  color: #fff;
 }
 
 .header__head h2 {
@@ -574,8 +576,8 @@ body.dark-theme {
   margin-bottom: 30px;
 }
 
-hr {
-  display: none;
+.white.dark {
+  color: white;
 }
 
 .green {
